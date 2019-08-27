@@ -27,4 +27,4 @@ def draw_ruler(num_inches, major_length):
         draw_interval(major_length - 1)             # Draw interior ticks   
         draw_line(major_length, str(i))             # Draw the i times tick and label
 
-draw_ruler(3, 5)
+draw_ruler(3, 3)
