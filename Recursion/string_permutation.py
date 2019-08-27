@@ -1,28 +1,22 @@
-def permutation(string):
+def permutation(stri):
 
     out = []
 
-    if len(string) == 1:
-        out = [string]
+    if len(stri) == 1:
+        out = [stri]
 
     else:
-        for i, let in enumerate(string):
 
-            print("i = ", i)
-            print("letter = ", let)
+        for i,letter in enumerate(stri):
 
-            for perm in permutation(string[:i] + string[i+1:]):
+            for j in permutation(stri[:i] + stri[i+1:]):
 
-                print('perm = ', perm)
+                out += [letter + j]
 
-                out += [let + perm]
-            
     return out
 
-string = 'ABC'
-print(permutation(string))
-
-
+stri = 'ABC'
+print(permutation(stri))
 
 
 
